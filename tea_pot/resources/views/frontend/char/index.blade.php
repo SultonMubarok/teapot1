@@ -9,17 +9,22 @@
     </header>
     <div class="page-title">
         <div class="row">
+            <h3>Data Karakter 
+                <img src="{{asset('assets\images\samples\images\elements\anemo.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\cryo.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\hydro.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\dendro.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\pyro.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\electro.png')}}" alt="" width="45px" height="45px">
+                <img src="{{asset('assets\images\samples\images\elements\geo.png')}}" alt="" width="45px" height="45px">
+            </h3>
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Data karakter</h3>
                 <p class="text-subtitle text-muted"></p>
             </div>
         </div>
     </div>
     <section class="section">
         <div class="card">
-            <div class="card-header">
-                Simple Datatable
-            </div>
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>

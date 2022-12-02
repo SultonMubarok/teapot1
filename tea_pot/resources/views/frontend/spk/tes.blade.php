@@ -9,7 +9,7 @@
 
         <section id="basic-vertical-layouts">
             <div class="row match-height">
-                <div class="col-md-6 col-12">
+                <div class="col-md-12 col-12">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Edit Kriteria</h4>
@@ -43,12 +43,37 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
+                                                <label for="first-name-vertical"><b> Pilih Bobot Jawaban Anda </b></label>
+                                                    <br>
+                                                    <input class="form-check-input" type="radio" name="bobot" id="flexRadioDefault1" value="{{ isset($kriteria) ? 3 : '' }}">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Tidak terlalu Penting = 3
+                                                    </label>
+                                                    <br>
+                                                    <input class="form-check-input" type="radio" name="bobot" id="flexRadioDefault2" value="{{ isset($kriteria) ? 5 : '' }}">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Cukup Penting = 5
+                                                    </label>
+                                                    <br>
+                                                    <input class="form-check-input" type="radio" name="bobot" id="flexRadioDefault3" value="{{ isset($kriteria) ? 7 : '' }}">
+                                                    <label class="form-check-label" for="flexRadioDefault3">
+                                                        Lumayan Penting = 7
+                                                    </label>
+                                                    <br>
+                                                    <input class="form-check-input" type="radio" name="bobot" id="flexRadioDefault4" value="{{ isset($kriteria) ? 9 : '' }}">
+                                                    <label class="form-check-label" for="flexRadioDefault4">
+                                                        Sangat Penting = 9
+                                                    </label>
+                                            </div>
+                                            <!--Tes
+                                            <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="first-name-vertical">Bobot</label>
                                                     <input type="number" id="first-name-vertical" class="form-control"
                                                         name="bobot" placeholder="Input Bobot" value="{{ isset($kriteria) ? $kriteria->bobot : '' }}">
                                                 </div>
                                             </div>
+                                            -->
                                             <div class="col-12 d-flex justify-content-end">
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
                                             </div>

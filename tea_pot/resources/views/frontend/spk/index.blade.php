@@ -9,7 +9,7 @@
 <div class="page-heading">
     <div class="page-title">
     <div class="row">
-    <h3>Halaman Rekomendasi</h3>
+    <h3>Halaman Rekomendasi <img src="{{asset('assets\images\samples\images\starglitter.png')}}" alt="" width="50px" height="50px"></h3>
         <p class="text-subtitle text-muted">Untuk cara menggunakan fitur rekomendasi, anda dapat melihat tutorial pada link</p>
     </div>
 </div>
@@ -84,6 +84,7 @@
 <!--Spk-->
     <div class="card">
         <div class="card-body">
+            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Penentuan Bobot </h4>
             <table class="table table-striped" id="table0">
                 <thead>
                     <tr>
@@ -100,7 +101,7 @@
                         <td>{{ $k->ask }}</td>
                         <td>{{ $k->bobot }}</td>
                         <td>
-                            <a href="{{ route('spk.edit',$k->id) }}" class="btn icon btn-warning"><i class="bi bi-pencil"></i></a>
+                            <a href="{{ route('spk.edit',$k->id) }}" class="btn btn-outline-warning">Inputkan</a>
                         </td>
                     @endforeach
                     </tr>
@@ -150,11 +151,8 @@
     </div>
 Step3-->
     <div class="card">
-        <div class="card-header">
-            <h4>Step 2 Mencari Nilai S</h4>
-        </div>
         <div class="card-body">
-            <h6>Si = PRODUCT(C1:C4)</h6>
+            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Hasil </h4>
             <table class="table table-striped" id="table1">
                 <thead>
                     <tr>
@@ -165,7 +163,7 @@ Step3-->
                         <th>Weapon</th>
                         <th>Element</th>
                         <th>
-                            <button class="btn btn-outline-info"> Urutkan </button>
+                            <button class="btn btn-outline-info">Urutkan Hasil <b class="bi bi-arrow-down-up"></b></button>
                         </th>
                     </tr>
                 </thead>

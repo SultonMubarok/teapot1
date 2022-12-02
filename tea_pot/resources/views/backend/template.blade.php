@@ -45,13 +45,6 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-
-            <li class="sidebar-item ">
-                <a href="/admin/alternatif" class='sidebar-link'>
-                    <i class="bi bi-person-lines-fill"></i>
-                    <span>Data Karakter</span>
-                </a>
-            </li>
             
             <li class="sidebar-item ">
                 <a href="/admin/banner" class='sidebar-link'>
