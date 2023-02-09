@@ -530,7 +530,7 @@
       searchable: !0,
       paging: !0,
       perPage: 10,
-      perPageSelect: [5, 10, 15, 20, 25],
+      perPageSelect: [3, 5, 10, 52],
       nextPrev: !0,
       firstLast: !1,
       prevText: "&lsaquo;",

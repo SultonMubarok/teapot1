@@ -6,14 +6,6 @@
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-<div class="page-heading">
-    <div class="page-title">
-    <div class="row">
-    <h3>Halaman Rekomendasi <img src="{{asset('assets\images\samples\images\starglitter.png')}}" alt="" width="50px" height="50px"></h3>
-        <p class="text-subtitle text-muted">Untuk cara menggunakan fitur rekomendasi, anda dapat melihat tutorial pada link</p>
-    </div>
-</div>
-
 <!--
 <section class="section">
     <div class="card">
@@ -82,16 +74,19 @@
 </section>
 -->
 <!--Spk-->
+<div class="row">
+    <form method="" action="" class="form form-vertical" enctype="multipart/form-data">
+<a href="/user/spk" class="btn btn-primary me-1 mb-1">Kembali</a>
+<br>
     <div class="card">
         <div class="card-body">
-            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Penentuan Bobot </h4>
+            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Inputan Anda </h4>
             <table class="table mb-0 table-lg" id="table0">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Pertanyaan</th>
                         <th>Bobot</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -100,16 +95,8 @@
                         <td>{{ $no++ }}</td>
                         <td>{{ $k->ask }}</td>
                         <td>{{ $k->bobot }}</td>
-                        <td>
-                            <a href="{{ route('spk.edit',$k->id) }}" class="btn btn-outline-warning">Inputkan</a>
-                        </td>
                     @endforeach
                     </tr>
-                    <th>
-                        <td></td>
-                        <td></td>
-                        <td><a href="/user/hasil" class="btn btn-success">Proses Hasil</a></td>
-                    </th>
                 </tbody>
             </table>
         </div>
@@ -155,43 +142,46 @@
         </div>
     </div>
 Step3-->
-
-<!--
-    <div class="card">
-        <div class="card-body">
-            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Hasil </h4>
-            <table class="table mb-0 table-lg" id="table1">
-                <thead>
-                    <tr>
-                        <th>Kode</th>
-                        <th>Karakter</th>
-                        <th>Rarity</th>
-                        <th>Role</th>
-                        <th>Weapon</th>
-                        <th>Element</th>
-                        <th>
-                            <button class="btn btn-outline-info">Urutkan Hasil <b class="bi bi-arrow-down-up"></b></button>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($alternatif as $a)
-                    <tr>
-                        <td>{{ $a->kode_alternatif }}</td>
-                        <td>{{ $a->nama_alternatif }}</td>
-                        <td>{{ $a->rarity }}</td>
-                        <td>{{ $a->role }}</td>
-                        <td>{{ $a->weapon }}</td>
-                        <td>{{ $a->element }}</td>
-                        <td>{{ ($a->w1**($k->bobot/$sumbot))*($a->w2**($k->bobot/$sumbot))*($a->w3**($k->bobot/$sumbot))*($a->w4**($k->bobot/$sumbot))}}</td>
-                        <td><a href="{{ route('char.edit',$a->id) }}" class="btn btn-outline-primary">lihat Detail<i class=""></i></a></td>
-                        @endforeach 
-                    <h6 id="hasil"></h6>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="section">
+        <div class="card">
+            <div class="card-body">
+                <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Hasil Perhitungan </h4>
+                <table class="table mb-0 table-lg" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Kode</th>
+                            <th>Karakter</th>
+                            <th>Rarity</th>
+                            <th>Role</th>
+                            <th>Weapon</th>
+                            <th>Element</th>
+                            <th>
+                                <button class="btn btn-outline-info">Urutkan Hasil <b class="bi bi-arrow-down-up"></b></button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($alternatif as $a)
+                        <tr>
+                            <td>{{ $a->kode_alternatif }}</td>
+                            <td>{{ $a->nama_alternatif }}</td>
+                            <td>{{ $a->rarity }}</td>
+                            <td>{{ $a->role }}</td>
+                            <td>{{ $a->weapon }}</td>
+                            <td>{{ $a->element }}</td>
+                            <td>{{ ($a->w1**($k->bobot/$sumbot))*($a->w2**($k->bobot/$sumbot))*($a->w3**($k->bobot/$sumbot))*($a->w4**($k->bobot/$sumbot))}}</td>
+                            <td><a href="{{ route('char.edit',$a->id) }}" class="btn btn-outline-primary">Detail Karakter<i class=""></i></a></td>
+                            @endforeach 
+                        <h6 id="hasil"></h6>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/user/spk" class="btn btn-primary me-1 mb-1">Kembali</a>
+            </div>
         </div>
-    </div>
+    </section>
+    </form>
+</div>
 
     <script>
         var table = document.getElementById("table0"), sumHsl = 0;
@@ -201,10 +191,12 @@ Step3-->
         }
         document.getElementById("hasil").innerHTML = "⨊ Si = "+ sumHsl;
     </script>
--->
 
+
+<script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>
+<script src="{{asset('assets/js/app.js')}}"></script>
 <!--End-->
 
 </div>
-<script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>
+
 @endsection

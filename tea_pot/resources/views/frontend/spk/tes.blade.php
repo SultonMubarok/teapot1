@@ -75,6 +75,7 @@
                                             </div>
                                             -->
                                             <div class="col-12 d-flex justify-content-end">
+                                                <button type="back" class="btn btn-secondary me-1 mb-1">Kembali</button>
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
                                             </div>
                                         </div>

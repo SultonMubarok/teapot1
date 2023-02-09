@@ -44,6 +44,7 @@ Route::group(['namespace'=>'Frontend'], function () {
 		Route::resource('/home', '\App\Http\Controllers\Frontend\FHomeController');
 		Route::resource('/char', '\App\Http\Controllers\Frontend\FCharController');
 		Route::resource('/spk', '\App\Http\Controllers\Frontend\FSpkController');
+		Route::resource('/hasil', '\App\Http\Controllers\Hasil');
     });
 });
 
