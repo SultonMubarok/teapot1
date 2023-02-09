@@ -68,11 +68,17 @@ class BAlternatifController extends Controller
         $alternatif->w4 = $request->w4;
         if($request->hasfile('image_char'))
         {
-            $file = $request->file('image_char');
-            $extention = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extention;
-            $file->move('file_karakter', $filename);
+            $file           = $request->file('image_char');
+            $nama_file      = $file->getClientOriginalName();
+            $file->move('file_karakter',$file->getClientOriginalName());
             $alternatif->image_char = $filename;
+        }
+        if($request->hasfile('image_char1'))
+        {
+            $file           = $request->file('image_char1');
+            $nama_file      = $file->getClientOriginalName();
+            $file->move('file_karakter',$file->getClientOriginalName());
+            $alternatif->image_char1 = $filename;
         }
         $alternatif->save();
 
@@ -100,6 +106,14 @@ class BAlternatifController extends Controller
             $filename = time().'.'.$extention;
             $file->move('assets/images/', $filename);
             $alternatif->image_char = $filename;
+        }
+        if($request->hasfile('image_char1'))
+        {
+            $file = $request->file('image_char1');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('assets/images/', $filename);
+            $alternatif->image_char1 = $filename;
         }
         $alternatif->save();
 

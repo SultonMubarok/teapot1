@@ -28,6 +28,7 @@ class AlternatifImport implements ToModel
             'element' => $row[10],
             'detail' => $row[11],
             'image_char' => $row[12],
+            'image_char1' => $row[13],
         ]);
     }
 }

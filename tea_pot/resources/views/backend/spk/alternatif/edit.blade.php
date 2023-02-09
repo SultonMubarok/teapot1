@@ -97,6 +97,13 @@
                                                     name="w4" placeholder="Input Code" value="{{ isset($alternatif) ? $alternatif->w4 : '' }}">
                                             </div>
                                         </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="first-name-column">Image1</label>
+                                                <input type="file" id="first-name-column" class="form-control"
+                                                    name="image_char1" value="{{ isset($alternatif) ? $alternatif->image_char1 : '' }}">
+                                            </div>
+                                        </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="first-name-column">Detail</label>

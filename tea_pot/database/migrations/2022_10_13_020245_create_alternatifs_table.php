@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('element')->nullable();
             $table->string('detail', 3000)->nullable();
             $table->string('image_char')->nullable();
+            $table->string('image_char1')->nullable();
             $table->integer('w1')->nullable();
             $table->integer('w2')->nullable();
             $table->integer('w3')->nullable();

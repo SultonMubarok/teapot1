@@ -12,5 +12,5 @@ class Alternatif extends Model
     protected $fillable = [
         'kode_alternatif','nama_alternatif',
         'rarity','role','weapon','element',
-        'detail','image_char','w1','w2','w3','w4',];
+        'detail','image_char','image_char1','w1','w2','w3','w4',];
 }

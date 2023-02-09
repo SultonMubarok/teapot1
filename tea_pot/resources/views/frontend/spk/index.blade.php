@@ -85,7 +85,7 @@
     <div class="card">
         <div class="card-body">
             <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Penentuan Bobot </h4>
-            <table class="table table-striped" id="table0">
+            <table class="table mb-0 table-lg" id="table0">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -153,7 +153,7 @@ Step3-->
     <div class="card">
         <div class="card-body">
             <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Hasil </h4>
-            <table class="table table-striped" id="table1">
+            <table class="table mb-0 table-lg" id="table1">
                 <thead>
                     <tr>
                         <th>Kode</th>

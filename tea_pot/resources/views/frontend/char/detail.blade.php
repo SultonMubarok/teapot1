@@ -6,13 +6,16 @@
         <h3>Detail Karakter</h3>
         <h3 class="text-muted mb-0">{{ isset($alternatif) ? $alternatif->nama_alternatif : '' }}</h3>
     </div>
+    <a href="#" class="burger-btn d-block d-xl-none">
+        <i class="bi bi-justify fs-3"></i>
+    </a>
     <div class="page-content">
         <section class="row">
             <div class="col-12 col-lg-8">
                 <div class="row">
                         <div class="card">
                             <div class="card-body">
-                                <img src="{{ asset('assets/images/'.$alternatif->image_char) }}" >
+                                <img src="{{ asset('assets/images/samples/images/characters/full/'.$alternatif->image_char1) }}" >
                             </div>
                         </div>
                 </div>
@@ -61,9 +64,7 @@
             </div>
         </section>
     </div>
-        <a href="#" class="burger-btn d-block d-xl-none">
-            <i class="bi bi-justify fs-3"></i>
-        </a>
+
         <!--fix-->
         <section id="multiple-column-form">
             <div class="row match-height">

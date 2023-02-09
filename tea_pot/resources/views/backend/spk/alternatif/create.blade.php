@@ -98,6 +98,13 @@
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
+                                                <label for="first-name-column">Image1</label>
+                                                <input type="file" id="first-name-column" class="form-control"
+                                                    name="image_char1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
                                                 <label for="first-name-column">Detail</label>
                                                 <input type="text" id="first-name-column" class="form-control"
                                                     name="detail">

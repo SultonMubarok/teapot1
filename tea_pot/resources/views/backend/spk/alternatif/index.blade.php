@@ -95,6 +95,7 @@
                             <th>Element</th>
                             <th>Detail</th>
                             <th>Image</th>
+                            <th>Image1</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -108,7 +109,8 @@
                             <td>{{ $k->weapon }}({{ $k->w3 }})</td>
                             <td>{{ $k->element }}({{ $k->w4 }})</td>
                             <td>{!! Str::limit($k->detail,20) !!}</td>
-                            <td><img src="{{ asset('assets/images/'.$k->image_char) }}" width="70px" height="50px" alt="Image"></td>
+                            <td><img src="{{ asset('assets/images/samples/images/characters/'.$k->image_char) }}" width="70px" height="50px" alt="Image"></td>
+                            <td><img src="{{ asset('assets/images/samples/images/characters/full/'.$k->image_char1) }}" width="70px" height="50px" alt="Image1"></td>
                             <td>
                                 <a href="{{ route('alternatif.edit',$k->id) }}" class="btn icon btn-warning"><i class="bi bi-pencil"></i></a>
                                 <form action="{{ route('alternatif.destroy',$k->id) }}" method="POST">

@@ -23,10 +23,30 @@
             </div>
         </div>
     </div>
+    
+<section>
+    <div class="row">
+        @foreach($alternatif as $a)
+        <div class="col-md-2 col-sm-12">
+            <div class="card">
+                <div class="card-content">
+                    <img class="card-img-top img-fluid" src="{{ asset('assets/images/samples/images/characters/'.$a->image_char) }}" alt="Card image cap"
+                        />
+                    <div class="card-body">
+                        <h3 class="card-title">{{ $a->nama_alternatif }}</h3>
+                        <a href="{{ route('char.edit',$a->id) }}" class="btn btn-outline-primary">Detail<i class=""></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach 
+    </div>
+</section>
+
     <section class="section">
         <div class="card">
             <div class="card-body">
-                <table class="table table-striped" id="table1">
+                <table class="table mb-0 table-lg" id="table1">
                     <thead>
                         <tr>
                             <th>Kode Alternatif</th>
@@ -58,6 +78,6 @@
 
     </section>
     
-
+    <script src="{{asset('assets/js/app.js')}}"></script>
 <script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>
 @endsection
