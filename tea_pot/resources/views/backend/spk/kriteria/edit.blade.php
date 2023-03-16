@@ -6,7 +6,6 @@
         <a href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
-
         <section id="basic-vertical-layouts">
             <div class="row match-height">
                 <div class="col-md-6 col-12">
@@ -50,9 +49,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-12 d-flex justify-content-end">
+                                                <a href="/admin/kriteria" class="btn btn-light-secondary me-1 mb-1">Kembali</a>
                                                 <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                
+                                                <!--
                                                 <button type="reset"
                                                     class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                                -->
                                             </div>
                                         </div>
                                     </div>

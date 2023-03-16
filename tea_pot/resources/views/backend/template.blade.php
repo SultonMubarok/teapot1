@@ -70,14 +70,6 @@
                     </li>
                 </ul>
             </li>
-
-            <li class="sidebar-item ">
-                <a href="/admin/alternatif" class='sidebar-link'>
-                    <i class="bi bi-telephone-fill"></i>
-                    <span>Kontak</span>
-                </a>
-            </li>
-            
         </ul>
     </div>
 </div>

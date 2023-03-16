@@ -28,7 +28,9 @@
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>
+                        <!--
                         <th><a href="/admin/kriteria/create" class="btn btn-primary"><i class="bi bi-plus-square-fill"></i></i> Tambah</a></th>
+                        -->
                         <tr>
                             <th>Kode Kriteria</th>
                             <th>Kriteria</th>
@@ -46,11 +48,13 @@
                             <td>{{ $k->bobot }}</td>
                             <td>
                                 <a href="{{ route('kriteria.edit',$k->id) }}" class="btn icon btn-warning"><i class="bi bi-pencil"></i></a>
+                                <!--
                                 <form action="{{ route('kriteria.destroy',$k->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                 <button type="submit" class="btn icon btn-danger"><i class="bi bi-trash-fill" onclick="return confirm('Yakin akan menghapus data?')"></i>
                                 </form>
+                            -->
                             </td>
                         @endforeach
                         </tr>

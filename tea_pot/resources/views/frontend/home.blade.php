@@ -11,7 +11,8 @@
   <div class="page-title">
       <div class="row">
         <h3>Selamat Datang di Teapot.id <img src="{{asset('assets\images\logo\teapot.jpg')}}" alt="" height="100px" width="100px"></h3>
-        <p class="text-subtitle text-muted">Teapot.id merupakan web yang membantu anda dalam merekomendasikan memilih kartakter keinginan anda!</p>
+        <p>Teapot.id merupakan web yang membantu anda dalam merekomendasikan memilih kartakter keinginan anda!</p>
+        <p>Bingung cara menggunakannya? <a href="https://youtu.be/4oBpaBEMBIM" target="_blank"> Klik Disini!</a></p> 
       </div>
   </div>
   <section class="section">

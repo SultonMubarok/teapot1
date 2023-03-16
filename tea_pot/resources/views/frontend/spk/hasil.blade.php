@@ -80,7 +80,7 @@
 <br>
     <div class="card">
         <div class="card-body">
-            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px"> Inputan Anda </h4>
+            <h4><img src="{{asset('assets\images\samples\images\commission.png')}}" alt="" width="45px" height="45px">Hasil Inputan Anda </h4>
             <table class="table mb-0 table-lg" id="table0">
                 <thead>
                     <tr>
@@ -169,7 +169,7 @@ Step3-->
                             <td>{{ $a->role }}</td>
                             <td>{{ $a->weapon }}</td>
                             <td>{{ $a->element }}</td>
-                            <td>{{ ($a->w1**($k->bobot/$sumbot))*($a->w2**($k->bobot/$sumbot))*($a->w3**($k->bobot/$sumbot))*($a->w4**($k->bobot/$sumbot))}}</td>
+                            <td>{{ (($a->w1**($k->bobot/$sumbot))*($a->w2**($k->bobot/$sumbot))*($a->w3**($k->bobot/$sumbot))*($a->w4**($k->bobot/$sumbot))/335)}}</td>
                             <td><a href="{{ route('char.edit',$a->id) }}" class="btn btn-outline-primary">Detail Karakter<i class=""></i></a></td>
                             @endforeach 
                         <h6 id="hasil"></h6>
@@ -182,15 +182,6 @@ Step3-->
     </section>
     </form>
 </div>
-
-    <script>
-        var table = document.getElementById("table0"), sumHsl = 0;
-        for(var t = 1; t < table.rows.length; t++)
-        {
-            sumHsl = sumHsl + parseInt(table.rows[t].cells[6].innerHTML);
-        }
-        document.getElementById("hasil").innerHTML = "⨊ Si = "+ sumHsl;
-    </script>
 
 
 <script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>

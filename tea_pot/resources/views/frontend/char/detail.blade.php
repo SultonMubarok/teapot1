@@ -3,8 +3,7 @@
 
 <div id="main">
     <div class="page-heading">
-        <h3>Detail Karakter</h3>
-        <h3 class="text-muted mb-0">{{ isset($alternatif) ? $alternatif->nama_alternatif : '' }}</h3>
+        <h2>Detail Karakter</h2>
     </div>
     <a href="#" class="burger-btn d-block d-xl-none">
         <i class="bi bi-justify fs-3"></i>
@@ -15,6 +14,7 @@
                 <div class="row">
                         <div class="card">
                             <div class="card-body">
+                                <h3>{{ isset($alternatif) ? $alternatif->nama_alternatif : '' }}</h3>
                                 <img src="{{ asset('assets/images/samples/images/characters/full/'.$alternatif->image_char1) }}" >
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                     <div class="card-content pb-4">
                         <div class="recent-message d-flex px-4 py-3">
                             <div class="avatar avatar-lg">
-                                <img src="{{asset('assets/images/samples/images/ascension_star.png')}}">
+                                <img src="{{asset('assets/images/samples/images/star.png')}}">
                             </div>
                             <div class="name ms-4">
                                 <h5 class="mb-1">Rarity</h5>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="recent-message d-flex px-4 py-3">
                             <div class="avatar avatar-lg">
-                                <img src="{{asset('assets/images/samples/images/home.png')}}">
+                                <img src="{{asset('assets/images/samples/images/rank.png')}}">
                             </div>
                             <div class="name ms-4">
                                 <h5 class="mb-1">Role</h5>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="recent-message d-flex px-4 py-3">
                             <div class="avatar avatar-lg">
-                                <img src="{{asset('assets/images/samples/images/talent_1.png')}}">
+                                <img src="{{asset('assets/images/samples/images/role.png')}}">
                             </div>
                             <div class="name ms-4">
                                 <h5 class="mb-1">Weapon</h5>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="recent-message d-flex px-4 py-3">
                             <div class="avatar avatar-lg">
-                                <img src="{{asset('assets/images/samples/images/wish.png')}}">
+                                <img src="{{asset('assets/images/samples/images/puzzle-game.png')}}">
                             </div>
                             <div class="name ms-4">
                                 <h5 class="mb-1">Element</h5>

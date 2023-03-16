@@ -43,6 +43,7 @@
     </div>
 </section>
 
+<!--tes
     <section class="section">
         <div class="card">
             <div class="card-body">
@@ -77,7 +78,7 @@
         </div>
 
     </section>
-    
+-->    
     <script src="{{asset('assets/js/app.js')}}"></script>
 <script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>
 @endsection

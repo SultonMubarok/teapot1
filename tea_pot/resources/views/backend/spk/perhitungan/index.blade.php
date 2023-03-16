@@ -11,15 +11,7 @@
     <div class="row">
     <div class="col-12 col-md-6 order-md-1 order-last">
         <h3>Penilaian</h3>
-        <p class="text-subtitle text-muted">A sortable, searchable, paginated table without dependencies thanks to simple-datatables</p>
-    </div>
-    <div class="col-12 col-md-6 order-md-2 order-first">
-        <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                <li class="breadcrumb-item active" aria-current="page">DataTable</li>
-            </ol>
-        </nav>
+        <p class="text-subtitle text-muted">Hasil Input Perhitungan</p>
     </div>
     </div>
 </div>
@@ -56,8 +48,6 @@
                         <td>{{ $k->bobot/$sumbot }}</td>
                         <td>{{ (($k->bobot/$sumbot)*1) }}</td>
                     @endforeach
-
-                    
                 </tr>
                 </tbody>
             </table>
@@ -101,50 +91,45 @@
     </div>
     <!--sum-->
     <script>
-        var table = document.getElementById("table0"), sumHsl = 0;
+        var table = document.getElementById("table1"), sumHsl = 0;
         for(var t = 1; t < table.rows.length; t++)
         {
             sumHsl = sumHsl + parseInt(table.rows[t].cells[6].innerHTML);
         }
         document.getElementById("hasil").innerHTML = "⨊ Si = "+ sumHsl;
     </script>
-<!--Step3
+<!--Step3-->
 <div class="card">
-    <div class="card-header">
-        <h4>Step 3 Urutkan</h4>
-    </div>
-    <div class="card-body">
-        <table class="table table-striped" id="table1">
-            <thead>
-                <tr>
-                    <th>Kode alternatif</th>
-                    <th>Alternatif</th>
-                    <th>Vi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($alternatif as $a)
-                <tr>
-                    <td>{{ $a->kode_alternatif }}</td>
-                    <td>{{ $a->nama_alternatif }}</td>
-                    <td id="vi"></td>
-                    @endforeach             
-                </tr>
-                <script>
-                    var table = document.getElementById("table0"), sumHsl = 0;
-                    for(var t = 1; t < table.rows.length; t++)
-                    {
-                        sumHsl = sumHsl + parseInt(table.rows[t].cells[6].innerHTML);
-                        tes = table.rows[t].cells[6].innerHTML;
-                        final = tes/sumHsl;
-                    }
-                        document.getElementById("vi").innerHTML = final;
-                </script>
-            </tbody>
-        </table>
+    <div class="card">
+        <div class="card-header">
+            <h4>Step 3 Mencari Nilai V</h4>
+        </div>
+        <div class="card-body">
+            <h6>Si = PRODUCT(C1:C4)</h6>
+            <table class="table table-striped" id="table1">
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Alternatif</th>
+                        <th>Vi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($alternatif as $a)
+                    <tr>
+                        <td>{{ $a->kode_alternatif }}</td>
+                        <td>{{ $a->nama_alternatif }}</td>
+                        <td>{{ (($a->w1**($k->bobot/$sumbot))*($a->w2**($k->bobot/$sumbot))*($a->w3**($k->bobot/$sumbot))*($a->w4**($k->bobot/$sumbot))/335)}}</td>
+                        @endforeach 
+                    <h6 id="hasil"></h6>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
--->
+</section>
+
 
 </div>
 <script src="{{asset('assets/js/extensions/simple-datatables.js')}}"></script>

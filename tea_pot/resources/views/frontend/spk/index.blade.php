@@ -10,7 +10,7 @@
     <div class="page-title">
     <div class="row">
     <h3>Halaman Rekomendasi <img src="{{asset('assets\images\samples\images\starglitter.png')}}" alt="" width="50px" height="50px"></h3>
-        <p class="text-subtitle text-muted">Untuk cara menggunakan fitur rekomendasi, anda dapat melihat tutorial pada link</p>
+        <p class="text-subtitle text-muted">Untuk cara menggunakan fitur rekomendasi, anda dapat melihat tutorial pada halaman Home</p>
     </div>
 </div>
 
