@@ -8,8 +8,13 @@ use Illuminate\Http\Request;
 class BDashboardController extends Controller
 {
     //
-    public function index()
+    public function __construct()
     {
-        # code...
+        $this->middleware('auth');
     }
+    public function index(){
+		$banner = Banner::all();
+		return view('backend.dashboard',compact('banner'));
+	}
+
 }

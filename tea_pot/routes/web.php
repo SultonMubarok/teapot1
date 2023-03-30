@@ -16,13 +16,15 @@ Route::get('/test-koneksi-database', function() {
 
 
 //Admin/backend
-Route::get('/', function () {
+Route::get('/1', function () {
     return view('home');
 });
+Route::resource('/', '\App\Http\Controllers\Frontend\FHomeController');
+
 Auth::routes();
 Route::group(['namespace'=>'Backend'], function () {
     Route::prefix('admin')->group(function () {
-		Route::resource('/dashboard', '\App\Http\Controllers\AdminController');
+		Route::resource('/dashboard', '\App\Http\Controllers\Backend\BDashboardController');
 		Route::resource('/banner', '\App\Http\Controllers\Backend\BBannerController');
 		Route::resource('/karakter', '\App\Http\Controllers\Backend\BCharController');
         Route::resource('/kriteria', '\App\Http\Controllers\Backend\BKriteriaController');

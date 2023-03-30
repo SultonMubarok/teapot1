@@ -81,6 +81,7 @@
                     <div class="float-end">
                         <p>Crafted by <a href="https://www.facebook.com/sulton.mubarok.338" target="_blank">Sul`</a></p>
                     </div>
+                    <p><a href="/admin/dashboard" target="_blank">q</a></p>
                 </div>
             </footer>
         </div>

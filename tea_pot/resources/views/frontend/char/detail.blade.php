@@ -5,6 +5,7 @@
     <div class="page-heading">
         <h2>Detail Karakter</h2>
     </div>
+    <a href="javascript:window.history.back();" class="btn btn-primary me-1 mb-1">Kembali</a>
     <a href="#" class="burger-btn d-block d-xl-none">
         <i class="bi bi-justify fs-3"></i>
     </a>

@@ -37,13 +37,21 @@ class FSpkController extends Controller
 
         return redirect()->route('spk.index')->with('success','Data Telah Berhasil Ditambah.');
     }
-	public function update($id, Request $request)
+    public function update($id, Request $request)
     {
-		$kriteria = Kriteria::find($id);
+        $this->validate($request, [
+            'kode_kriteria' => 'required',
+            'nama_kriteria' => 'required',
+            'ask' => 'required',
+            'bobot' => 'required',
+        ],[
+            'bobot.required' => 'Bobot harus diisi.',
+        ]);
+        $kriteria = Kriteria::find($id);
         $kriteria->kode_kriteria = $request->kode_kriteria;
         $kriteria->nama_kriteria = $request->nama_kriteria;
         $kriteria->ask = $request->ask;
-		$kriteria->bobot = $request->bobot;
+        $kriteria->bobot = $request->bobot;
         $kriteria->save();
 
         return redirect()->route('spk.index')->with('success','Data Telah Berhasil Diperbarui.');

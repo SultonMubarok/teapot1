@@ -16,7 +16,7 @@
           <div class="col-12 col-md-6 order-md-2 order-first">
               <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="/">Logout? </a>atau<a href="/user/home" target="_blank"> Ke User Bang?</a></li>
+                      <li class="breadcrumb-item"><a href="/1">Logout? </a>atau<a href="/user/home" target="_blank"> Ke User Bang?</a></li>
                   </ol>
               </nav>
           </div>
